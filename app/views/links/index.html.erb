@@ -1,1 +1,6 @@
 <h1>index page</h1>
+
+<% @links.each do |link| %>
+<p><%= link_to link.title, link.link, target: :_blank %></p>
+<% end %>
+<%= link_to "Add link", new_link_path %>
