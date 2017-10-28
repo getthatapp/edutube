@@ -5,13 +5,13 @@ class LinksController < ApplicationController
   end
 
   def new
-    @link - Link.new
+    @link = Link.new
   end
 
   def create
     @link = Link.new(link_params)
     if @link.save
-      redirect_to root_path, success: "Link created!"
+      redirect_to links_path, success: "Link created!"
     else
       render 'new'
     end
@@ -26,7 +26,7 @@ class LinksController < ApplicationController
   end
 
   def update
-    if link_update(link_params)
+    if link.update(link_params)
       redirect_to link_path(link), info: "Link updated!"
     else
       render 'edit'
@@ -34,7 +34,8 @@ class LinksController < ApplicationController
   end
 
   def destroy
-
+    link.destroy
+    redirect_to links_path, danger: "Link deleted!"
   end
 
   private
@@ -44,7 +45,5 @@ class LinksController < ApplicationController
   end
 
   def link
-    @link = Link.find(params[:id])
+    @link ||= Link.find(params[:id])
   end
-
-end
