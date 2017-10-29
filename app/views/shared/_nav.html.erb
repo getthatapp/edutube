@@ -4,7 +4,11 @@
       <%= link_to "EDUTUBE", root_path, class: 'navbar-brand' %>
     </div>
     <ul class="nav navbar-nav navbar-left">
-      <li><%= link_to "Add new link", new_link_path %></li>
+
+      <% if user_signed_in? %>
+        <li><%= link_to "Add new link", new_link_path %></li>
+      <% end %>
+
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <% if user_signed_in? %>

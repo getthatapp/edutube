@@ -25,6 +25,10 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'jquery-rails'
 # Devise
 gem 'devise', '~> 4.3'
+
+# Acts as taggable on
+gem 'acts-as-taggable-on', '~> 5.0'
+
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
