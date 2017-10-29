@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for @link, html: { multipart: true } do |f| %>
+      <%= render 'shared/errors', obj: @link %>
+      <div class="form-group">
+        <%= f.label :title %>
+        <%= f.text_field :title, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :link %>
+        <%= f.text_field :link, class: 'form-control' %>
+      </div>
+      <%= f.submit class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+</div>

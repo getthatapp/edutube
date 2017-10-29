@@ -1,6 +1,13 @@
-<h1>index page</h1>
+<h1>My links</h1>
 
 <% @links.each do |link| %>
-<p><%= link_to link.title, link.link, target: :_blank %></p>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <%= link_to link.title, link.link, target: :_blank %>
+    </div>
+    <div class="panel-footer">
+      <%= link_to "Edit", edit_link_path(link), class: 'btn btn-xs btn-default' %>
+      <%= link_to "Delete", link_path(link), method: :delete, class: 'btn btn-xs btn-danger' %>
+    </div>
+  </div>
 <% end %>
-<%= link_to "Add link", new_link_path %>
