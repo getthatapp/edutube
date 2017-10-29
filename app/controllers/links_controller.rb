@@ -1,8 +1,12 @@
 class LinksController < ApplicationController
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
 
   def index
-    @links = current_user.links.order(created_at: :DESC)
+    if params[:tag]
+        @links = Links.all.tagged_with(params[:tag]).order(created_at: :DESC)
+      else
+        @links = Link.all.order(created_at: :DESC)
+    end
   end
 
   def new
@@ -45,7 +49,7 @@ class LinksController < ApplicationController
   private
 
   def link_params
-    params.require(:link).permit(:title, :link)
+    params.require(:link).permit(:title, :link, :tag_list)
   end
 
   def link
