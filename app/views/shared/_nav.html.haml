@@ -1,0 +1,13 @@
+%nav.navbar.navbar-default
+  .container
+    .navbar-header
+      = link_to "EDUTUBE", root_path, class: 'navbar-brand'
+    %ul.nav.navbar-nav.navbar-left
+      - if user_signed_in?
+        %li= link_to "Add new link", new_link_path
+    %ul.nav.navbar-nav.navbar-right
+      - if user_signed_in?
+        %li= link_to "LOG OUT", destroy_user_session_path, method: :delete
+      - else
+        %li= link_to "REGISTER", new_user_registration_path
+        %li= link_to "LOG IN", new_user_session_path

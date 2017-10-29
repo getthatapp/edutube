@@ -27,6 +27,9 @@ gem 'jquery-rails'
 gem 'devise', '~> 4.3'
 # Acts as taggable on
 gem 'acts-as-taggable-on', '~> 5.0'
+# Haml
+gem 'haml', '~> 5.0', '>= 5.0.4'
+gem "haml-rails", "~> 1.0"
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

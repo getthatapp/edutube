@@ -1,0 +1,10 @@
+- @links.each do |link|
+  .panel.panel-default
+    .panel-body
+      = link_to link.title, link.link, target: :_blank
+      %p
+        Tags: #{raw link.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')}
+    .panel-footer
+      - if link.user == current_user
+        = link_to "Edit", edit_link_path(link), class: 'btn btn-xs btn-default'
+        = link_to "Delete", link_path(link), method: :delete, class: 'btn btn-xs btn-danger'
