@@ -1,10 +1,9 @@
-  class LinksController < ApplicationController
-
+class LinksController < ApplicationController
   def index
     if params[:tag]
-      @links = Links.all.tagged_with(params[:tag]).order(created_at: :DESC)
-    else
-      @links = Link.all.order(created_at: :DESC)
+        @links = Links.all.tagged_with(params[:tag]).order(created_at: :DESC)
+      else
+        @links = Link.all.order(created_at: :DESC)
     end
   end
 

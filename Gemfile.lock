@@ -227,8 +227,11 @@ DEPENDENCIES
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
   devise (~> 4.3)
+<<<<<<< HEAD
   haml (~> 5.0, >= 5.0.4)
   haml-rails (~> 1.0)
+=======
+>>>>>>> 5ee1d34cf7739c9312ae55a6503bfa2d2c7b2098
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)

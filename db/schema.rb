@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20171029102812) do
+=======
+
+ActiveRecord::Schema.define(version: 20171029102812) do
+
+>>>>>>> 5ee1d34cf7739c9312ae55a6503bfa2d2c7b2098
 
   create_table "links", force: :cascade do |t|
     t.string "title"
@@ -21,6 +27,10 @@ ActiveRecord::Schema.define(version: 20171029102812) do
     t.index ["user_id"], name: "index_links_on_user_id"
   end
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5ee1d34cf7739c9312ae55a6503bfa2d2c7b2098
   create_table "taggings", force: :cascade do |t|
     t.integer "tag_id"
     t.string "taggable_type"
