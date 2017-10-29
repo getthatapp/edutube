@@ -1,5 +1,4 @@
 class LinksController < ApplicationController
-
   def index
     if params[:tag]
         @links = Links.all.tagged_with(params[:tag]).order(created_at: :DESC)

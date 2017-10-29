@@ -5,5 +5,5 @@ Rails.application.routes.draw do
 
   get 'tags/:tag', to: 'links#index', as: :tag
   resources :links, only: [:index, :new, :create, :edit, :update, :destroy]
-  
+
 end
