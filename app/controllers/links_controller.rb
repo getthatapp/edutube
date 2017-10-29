@@ -11,7 +11,8 @@ class LinksController < ApplicationController
   def create
     @link = Link.new(link_params)
     if @link.save
-      redirect_to links_path, success: "Link created!"
+      flash[:success] = "Link created!"
+      redirect_to links_path
     else
       render 'new'
     end
@@ -27,7 +28,8 @@ class LinksController < ApplicationController
 
   def update
     if link.update(link_params)
-      redirect_to link_path(link), info: "Link updated!"
+      flash[:info] = "Link updated!"
+      redirect_to links_path
     else
       render 'edit'
     end
@@ -35,7 +37,8 @@ class LinksController < ApplicationController
 
   def destroy
     link.destroy
-    redirect_to links_path, danger: "Link deleted!"
+    flash[:danger] = "Link deleted!"
+    redirect_to links_path
   end
 
   private
@@ -47,3 +50,4 @@ class LinksController < ApplicationController
   def link
     @link ||= Link.find(params[:id])
   end
+end

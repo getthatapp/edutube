@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
-  root 'home#home'
-  get 'home', to: 'home#home'
+  root 'links#index'
 
-  resources :links
+  resources :links, only: [:index, :new, :create, :edit, :update, :destroy]
 end
