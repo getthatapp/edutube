@@ -1,7 +1,8 @@
 class LinksController < ApplicationController
+  before_action :authenticate_user!
 
   def index
-    @links = Link.all.order(created_at: :DESC)
+    @links = current_user.links.order(created_at: :DESC)
   end
 
   def new
@@ -9,7 +10,7 @@ class LinksController < ApplicationController
   end
 
   def create
-    @link = Link.new(link_params)
+    @link = current_user.links.build(link_params)
     if @link.save
       flash[:success] = "Link created!"
       redirect_to links_path
