@@ -25,17 +25,11 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'jquery-rails'
 # Devise
 gem 'devise', '~> 4.3'
-<<<<<<< HEAD
 # Acts as taggable on
 gem 'acts-as-taggable-on', '~> 5.0'
 # Haml
 gem 'haml', '~> 5.0', '>= 5.0.4'
 gem "haml-rails", "~> 1.0"
-=======
-
-# Acts as taggable on
-gem 'acts-as-taggable-on', '~> 5.0'
->>>>>>> 5ee1d34cf7739c9312ae55a6503bfa2d2c7b2098
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
