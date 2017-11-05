@@ -4,6 +4,9 @@
       = link_to link.title, link.link, target: :_blank
       %p
         Tags: #{raw link.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')}
+      .author
+        %small
+          Created by: #{link.user.email}
     .panel-footer
       - if link.user == current_user
         = link_to "Edit", edit_link_path(link), class: 'btn btn-xs btn-default'

@@ -15,6 +15,8 @@ RSpec.feature "Adding links" do
     click_button "Create link"
 
     expect(page).to have_content("Link created!")
+    expect(page).to have_content("Created by: #{@user.email}")
+    expect(Link.last.user).to eq(@user)
     expect(page.current_path).to eq(links_path)
   end
 end
