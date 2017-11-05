@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171029102812) do
+ActiveRecord::Schema.define(version: 20171105164425) do
 
   create_table "links", force: :cascade do |t|
     t.string "title"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20171029102812) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+    t.string "tag_list"
     t.index ["user_id"], name: "index_links_on_user_id"
   end
 

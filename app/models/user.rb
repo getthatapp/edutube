@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  acts_as_tagger
   has_many :links
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

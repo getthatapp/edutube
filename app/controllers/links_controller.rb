@@ -17,6 +17,7 @@ class LinksController < ApplicationController
       flash[:success] = "Link created!"
       redirect_to links_path
     else
+      flash[:danger] = "Link has not been created!"
       render 'new'
     end
   end
@@ -34,6 +35,7 @@ class LinksController < ApplicationController
       flash[:info] = "Link updated!"
       redirect_to links_path
     else
+      flash[:info] = "Link has not been updated!"
       render 'edit'
     end
   end
